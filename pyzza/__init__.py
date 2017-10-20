@@ -1,0 +1,1 @@
+from .pyzza import app

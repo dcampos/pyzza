@@ -1,0 +1,3 @@
+graft pyzza/templates
+graft pyzza/static
+include pyzza/schema.sql
