@@ -1,3 +1,4 @@
 *.pyc
 pyzza.egg-info/
 venv/
+.vscode/
