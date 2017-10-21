@@ -44,7 +44,7 @@ def init_db():
 def initdb_command():
     """Initializes the database."""
     init_db()
-    print 'Initialized the database'
+    print('Initialized the database')
 
 @app.route('/')
 def show_orders():
@@ -53,7 +53,7 @@ def show_orders():
                       'as created_at from pizza_order p join topping t on p.id_topping=t.id '
                       'join size s on p.id_size=s.id order by p.id desc')
     cur2 = db.execute('select * from size')
-    cur3 = db.execute('select * from topping');
+    cur3 = db.execute('select * from topping')
     orders = cur1.fetchall()
     for order in orders:
         print(order['created_at'])

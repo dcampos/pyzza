@@ -3,25 +3,23 @@
   {% if session.logged_in %}
     <form action="{{ url_for('add_order') }}" method="POST"
         class="add-entry">
-        <dl>
-            <dt>Topping:
-            <dd><select name="topping">
+            <p>Topping:
+            <select name="topping">
                 {% for topping in toppings %}
                     <option value="{{ topping.id }}">
                         {{ topping.name }}
                     </option>
                 {% endfor %}
             </select>
-            <dt>Size:
-            <dd><select name="size">
+            <p>Size:
+            <select name="size">
                 {% for size in sizes %}
                     <option value="{{ size.id }}">
                         {{ size.name }}
                     </option>
                 {% endfor %}
             </select>
-            <dd><input type=submit value="Place order">
-        </dl>
+            <p><input type=submit value="Place order"></p>
     </form>
      {% endif %}
     <ul class=orders>

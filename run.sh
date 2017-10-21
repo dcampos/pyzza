@@ -1,4 +1,5 @@
 #!/bin/sh
 
-rerun -p '**/*.{py,html,yml}' flask run
-
+export FLASK_APP=pyzza
+export FLASK_DEBUG=true
+flask run
